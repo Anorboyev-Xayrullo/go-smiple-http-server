@@ -101,14 +101,14 @@
 
 
 
-package main 
-import "fmt"
+// package main 
+// import "fmt"
 
-func main () {
-	var (
-		a uint32 = 1
-		b uint32 = 9
-		d = (a + b)
-	)
-	fmt.Println(d)
-}
+// func main () {
+// 	var (
+// 		a uint32 = 1
+// 		b uint32 = 9
+// 		d = (a + b)
+// 	)
+// 	fmt.Println(d)
+// }
