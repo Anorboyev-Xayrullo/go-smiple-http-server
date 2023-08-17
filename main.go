@@ -1,45 +1,45 @@
 package main 
 
-import (
-	"fmt"
-	"log"
-	"net/http"
-	"encoding/json"
-)
+// import (
+// 	"fmt"
+// 	"log"
+// 	"net/http"
+// 	"encoding/json"
+// )
 
-type Article struct {
-	Title string `json:"Title"`
-	Desc string `json:"desc"`
-	Content string `json:"content"`
-}
+// type Article struct {
+// 	Title string `json:"Title"`
+// 	Desc string `json:"desc"`
+// 	Content string `json:"content"`
+// }
 
-type Articles [] Article
-
-
-func allArticles(w http.ResponseWriter, r *http.Request) {
-
-	articles := Articles{
-		Article{Title:"Test  Title", Desc:"Test Description",Content:"Hello World"}
-	}
+// type Articles [] Article
 
 
+// func allArticles(w http.ResponseWriter, r *http.Request) {
 
-	fmt.Println("Endpoint Hit: All Articles EndPoint")
-	json.NewEncode(w).Encode(articles)
-}
-
-
-func homePage(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Home Page EndPoint Hit" )
-}
+// 	articles := Articles{
+// 		Article{Title:"Test  Title", Desc:"Test Description",Content:"Hello World"}
+// 	}
 
 
-func handleRequests() {
-	http.HandleFunc("/", homePage)
-	http.HandleFunc("/articles", allArticles)
-	log.Fatal(http.ListenAndServe(":8081", nil))
-}
 
-func main () {
-	handleRequests()
-}
+// 	fmt.Println("Endpoint Hit: All Articles EndPoint")
+// 	json.NewEncode(w).Encode(articles)
+// }
+
+
+// func homePage(w http.ResponseWriter, r *http.Request) {
+// 	fmt.Fprintf(w, "Home Page EndPoint Hit" )
+// }
+
+
+// func handleRequests() {
+// 	http.HandleFunc("/", homePage)
+// 	http.HandleFunc("/articles", allArticles)
+// 	log.Fatal(http.ListenAndServe(":8081", nil))
+// }
+
+// func main () {
+// 	handleRequests()
+//
